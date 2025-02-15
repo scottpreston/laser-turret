@@ -114,9 +114,8 @@ sudo raspi-config
 ```
 - **Navigate to:** `Interfacing Options`  
 - **Enable:**  
-  - **Camera** (Required for PiCamera2)  
-  - **I2C** (Required for Pololu Servo Controller)  
-  - **SPI** (If needed for future expansions)  
+  - **Camera** (Required for PiCamera2 on Older PIs)  
+  - **SSH** (Remote Access)  
 - **Exit and Reboot**:  
 ```bash
 sudo reboot
@@ -143,13 +142,6 @@ libcamera-still -o test.jpg
 ✔️ **AI-Based Auto Targeting** with OpenCV.  
 ✔️ **WebSocket Control** for real-time turret updates.  
 ✔️ **Mobile App Integration** for remote control.  
-
-## **🤝 Contributing**
-Want to improve the project?  
-1. **Fork the repository**  
-2. **Create a new branch**  
-3. **Submit a pull request**  
-
 
 ## **📜 License**
 This project is **open-source** under the **MIT License**.  
