@@ -46,7 +46,9 @@ async function handleMovement() {
             const { id, func } = actions[key];
             updateButtonState(id, true);
             await func();
-            updateButtonState(id, false);
+            if (id !== 'fire') {
+                updateButtonState(id, false);
+            }
         }
     }
 }
