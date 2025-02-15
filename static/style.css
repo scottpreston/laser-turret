@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+}
+
+section {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Form Elements */
+label {
+    display: inline-block;
+    width: 50px;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 80px;
+    margin-right: 10px;
+}
+
+/* Button Styles */
+.home-container button {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.diagnostic-container button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+input {
+    padding: 6px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+/* Button Hover */
+button:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+/* Disabled Button */
+button:disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Special Button (Fire) */
+#fire {
+    background-color: red;
+    color: white;
+    width: 80px;
+    height: 80px;
+}
+
+#fire:hover {
+    background-color: darkred;
+}
+
+/* Response Messages */
+.response {
+    margin-top: 10px;
+    color: green;
+}
+
+.error {
+    margin-top: 10px;
+    color: red;
+}
+
+/* Camera & Crosshair */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+#cameraImage {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Crosshair */
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    filter: brightness(0) invert(1);
+    opacity: 50%;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Crosshair Lines */
+.horizontal-line,
+.vertical-line {
+    position: absolute;
+    background-color: white;
+    opacity: 50%;
+}
+
+.horizontal-line {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+.vertical-line {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+/* Button Layout */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 640px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.middle-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

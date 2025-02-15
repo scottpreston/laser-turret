@@ -1,0 +1,20 @@
+{
+  "name": "laser-turret",
+  "version": "1.0.0",
+  "description": "home built laser turrent code",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "onoff": "^6.0.3",
+    "serialport": "^13.0.0",
+    "winston": "^3.17.0"
+  }
+}

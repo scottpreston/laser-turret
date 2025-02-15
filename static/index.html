@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Laser Turret Control</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="home-container">
+        <h1>Laser Turret</h1>
+        <p>Use your keyboard (W, S, A, D, F) or buttons below. Not working? Try the <a
+                href="diagnostic.html">diagnostic</a>.</p>
+
+        <!-- Camera & Crosshair Overlay -->
+        <section class="image-container">
+            <img id="cameraImage" src="http://10.10.10.228:5000/frame">
+            <div class="overlay">
+                <img id="crosshair" src="/crosshairs2.svg" alt="Crosshair">
+                <div class="horizontal-line"></div>
+                <div class="vertical-line"></div>
+            </div>
+        </section>
+
+        <!-- Movement Controls -->
+        <section class="button-container">
+            <div class="row">
+                <button id="up">UP</button>
+            </div>
+            <div class="middle-row">
+                <button id="left">LEFT</button>
+                <button id="fire">FIRE</button>
+                <button id="right">RIGHT</button>
+            </div>
+            <div class="row">
+                <button id="down">DOWN</button>
+            </div>
+        </section>
+    </div>
+    <!-- Load External JavaScript -->
+    <script src="script.js"></script>
+    <script>
+
+        // Event Listeners tied to this page
+        document.getElementById("up").addEventListener("click", () => tilt(tiltValue - 1));
+        document.getElementById("down").addEventListener("click", () => tilt(tiltValue + 1));
+        document.getElementById("left").addEventListener("click", () => pan(panValue - 1));
+        document.getElementById("right").addEventListener("click", () => pan(panValue + 1));
+        document.getElementById("fire").addEventListener("click", fireOneShot);
+
+        // Click to Fire on Image
+        document.querySelector('.image-container').addEventListener('click', fireOneShot);
+
+        // Toggle Cursor on Hover
+        document.querySelector('.image-container').addEventListener('mouseover', function (event) {
+            event.target.style.cursor = event.target.style.cursor === 'crosshair' ? 'default' : 'crosshair';
+        });
+
+        // Initialize on Load
+        reset();
+
+    </script>
+</body>
+
+</html>

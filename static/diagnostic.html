@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diagnostic Page - Relay & PanTilt APIs</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <h1>Diagnostic Page - Relay & PanTilt APIs</h1>
+    <p>The seconds below will allow you to test each of the functions of the turret and API.</p>
+    <div class="diagnostic-container">
+
+        <!-- Camera Section -->
+        <section>
+            <img id="cameraImage" src="http://10.10.10.228:5000/frame"><br>
+        </section>
+
+        <!-- Relay Control Section -->
+        <section>
+            <h2>Relay Control</h2>
+            <button id="relayOn">Turn Relay On</button>
+            <button id="relayOff">Turn Relay Off</button>
+        </section>
+
+        <!-- Pan API Section -->
+        <section>
+            <h2>Pan</h2>
+            <form>
+                <label for="panPos">Pos:</label>
+                <input type="number" id="panPos" name="pos" min="0" max="255" required>
+                <button type="button" id="panButton" class="diagnostic">Pan</button>
+            </form>
+        </section>
+
+        <!-- Tilt API Section -->
+        <section>
+            <h2>Tilt</h2>
+            <form>
+                <label for="tiltPos">Pos:</label>
+                <input type="number" id="tiltPos" name="pos" min="0" max="255" required>
+                <button type="button" id="tiltButton">Tilt</button>
+            </form>
+        </section>
+
+        <!-- Reset API Section -->
+        <section>
+            <h2>Reset PanTilt</h2>
+            <button id="resetButton">Reset</button>
+        </section>
+    </div>
+
+    <!-- Load External JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+
+        // Event Listeners tied to this page
+        document.getElementById('relayOn').addEventListener('click', async () => {
+            relayOn();
+        });
+
+        document.getElementById('relayOff').addEventListener('click', async () => {
+            relayOff();
+        });
+
+        document.getElementById('panButton').addEventListener('click', async () => {
+            const pos = parseInt(document.getElementById('panPos').value, 10);
+            pan(pos);
+        });
+
+        document.getElementById('tiltButton').addEventListener('click', async () => {
+            const pos = parseInt(document.getElementById('tiltPos').value, 10);
+            tilt(pos);
+        });
+
+        document.getElementById('resetButton').addEventListener('click', async () => {
+            document.getElementById('panPos').value = 127;
+            document.getElementById('tiltPos').value = 127;
+            reset();
+        })
+
+    </script>
+</body>
+
+</html>
