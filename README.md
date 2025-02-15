@@ -132,8 +132,6 @@ libcamera-still -o test.jpg
 ```
 💡 *If the test image is saved successfully, the camera is working!*
 
-
-
 🚀 **Now your Raspberry Pi is set up and ready for software installation!** 🎯
 
 ---
