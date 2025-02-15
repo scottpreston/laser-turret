@@ -31,10 +31,9 @@ It consists of:
 ## **🖥️ Software Overview**
 This project includes **four key components**:  
 
-### **1️⃣ Raspberry Pi Setup (📂 `py-setup.md`)**  
+### **1️⃣ Python Setup (📂 `py-setup.md`)**  
 - Installs **PiCamera2** for video streaming.  
-- Configures **GPIO 18** to control the **laser relay**.  
-- Sets up **I2C communication** for the **Pololu SSC** to control servos.  
+- Installs Python packages for use of cam-motion.  
 
 🔗 **[Python Setup Guide](./py-setup.md)**  
 
