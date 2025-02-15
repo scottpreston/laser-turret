@@ -123,4 +123,4 @@ pm2 delete py-cam-service
 ## **📂 Related Files**
 🔗 **[Python Setup Guide](./py-setup.md)**  
 🔗 **[Camera Motion Guide](./cam-motion.md)**  
-🔗 **[Client Code Overview](./client-setup.md)**  
+🔗 **[Client Setup (Web UI)](./client-setup.md)**  

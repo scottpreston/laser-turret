@@ -90,4 +90,4 @@ async function pan(value) {
 ## **📂 Related Files**
 🔗 **[Python Setup Guide](./py-setup.md)**  
 🔗 **[Camera Motion Guide](./cam-motion.md)**  
-🔗 **[Server Code Overview](./server-setup.md)**  
+🔗 **[Server Setup (Node.js API)](./server-setup.md)**  

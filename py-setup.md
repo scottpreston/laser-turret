@@ -43,7 +43,7 @@ http://<raspberry-pi-ip>:5000/frame
 
 ## **📂 Related Files**
 🔗 **[Camera Motion Guide](./cam-motion.md)**  
-🔗 **[Client Code (Web UI)](./client-setup.md)**  
-🔗 **[Server Code (Node.js API)](./server-setup.md)**  
+🔗 **[Client Setup (Web UI)](./client-setup.md)**  
+🔗 **[Server Setup (Node.js API)](./server-setup.md)**  
 
 🚀 **Now your Python environment is fully set up!** 🎯
