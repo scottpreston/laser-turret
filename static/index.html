@@ -43,16 +43,23 @@
     <script>
 
         // Event Listeners tied to this page
+        document.addEventListener('keydown', (event) => {
+            if (keysPressed.hasOwnProperty(event.code)) {
+                keysPressed[event.code] = true;
+                handleMovement();
+            }
+        });
+        document.addEventListener('keyup', (event) => {
+            if (keysPressed.hasOwnProperty(event.code)) {
+                keysPressed[event.code] = false;
+            }
+        });
         document.getElementById("up").addEventListener("click", () => tilt(tiltValue - 1));
         document.getElementById("down").addEventListener("click", () => tilt(tiltValue + 1));
         document.getElementById("left").addEventListener("click", () => pan(panValue - 1));
         document.getElementById("right").addEventListener("click", () => pan(panValue + 1));
         document.getElementById("fire").addEventListener("click", fireOneShot);
-
-        // Click to Fire on Image
         document.querySelector('.image-container').addEventListener('click', fireOneShot);
-
-        // Toggle Cursor on Hover
         document.querySelector('.image-container').addEventListener('mouseover', function (event) {
             event.target.style.cursor = event.target.style.cursor === 'crosshair' ? 'default' : 'crosshair';
         });

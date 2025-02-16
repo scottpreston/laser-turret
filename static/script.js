@@ -18,19 +18,6 @@ setInterval(() => {
 // Keypress Handling
 const keysPressed = { KeyW: false, KeyA: false, KeyS: false, KeyD: false, KeyF: false };
 
-document.addEventListener('keydown', (event) => {
-    if (keysPressed.hasOwnProperty(event.code)) {
-        keysPressed[event.code] = true;
-        handleMovement();
-    }
-});
-
-document.addEventListener('keyup', (event) => {
-    if (keysPressed.hasOwnProperty(event.code)) {
-        keysPressed[event.code] = false;
-    }
-});
-
 // Handle Movement
 async function handleMovement() {
     const actions = {
