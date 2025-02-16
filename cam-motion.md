@@ -145,5 +145,5 @@ Expected Response:
 
 ## **📂 Related Files**
 🔗 **[Python Setup Guide](./py-setup.md)**  
-🔗 **[Client Code (Web UI)](./client-setup.md)**  
-🔗 **[Server Code (Node.js API)](./server-setup.md)**  
+🔗 **[Client Setup (Web UI)](./client-setup.md)**  
+🔗 **[Server Setup (Node.js API)](./server-setup.md)**  
